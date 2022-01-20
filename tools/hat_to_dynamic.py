@@ -25,20 +25,10 @@ import shutil
 
 if __package__:
     from .hat_file import HATFile
+    from .utilities import get_platform
 else:
     from hat_file import HATFile
-
-def get_platform():
-    """Returns the current platform: Linux, Windows, or OS X"""
-    
-    if sys.platform.startswith("linux"):
-        return "Linux"
-    if sys.platform == "win32":
-        return "Windows"
-    if sys.platform == "darwin":
-        return "OS X"
-
-    sys.exit(f"ERROR: Unsupported operating system: {sys.platform}")
+    from utilities import get_platform
 
 
 def linux_create_dynamic_package(input_hat_path, input_hat_binary_path, output_hat_path, hat_file):
