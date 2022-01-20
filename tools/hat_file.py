@@ -414,8 +414,8 @@ class HATFile:
     """Encapsulates a HAT file. An instance of this class can be created by calling the 
     Deserialize class method e.g.:
         some_hat_file = Deserialize('someFile.hat') 
-    Similarly, HAT files can be serialized but creating/modifying a HATFile instance
-    and then calling Serilize e.g.:
+    Similarly, HAT files can be serialized by creating/modifying a HATFile instance
+    and then calling Serialize e.g.:
         some_hat_file.name = 'some new name'
         some_hat_file.Serialize(`someFile.hat`)
     """
